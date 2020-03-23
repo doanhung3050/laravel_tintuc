@@ -1,0 +1,47 @@
+body {
+    background-color: bisque;
+}
+
+#wrapper {
+    width: 980px;
+    margin: auto;
+}
+
+#header {
+    height: 120px;
+    background-color: chartreuse;
+}
+
+#content {
+    height: 800px;
+    margin: 10px 0;
+}
+
+#left {
+    height: 800px;
+    width: 200px;
+    float: left;
+    margin-right: 10px;
+    background-color: chocolate;
+}
+
+#right {
+    height: 800px;
+    width: 200px;
+    float: left;
+    margin-left: 10px;
+    background-color: chocolate;
+}
+
+#center {
+    height: 800px;
+    width: 560px;
+    float: left;
+    background-color: darkcyan;
+}
+
+#footer {
+    height: 120px;
+    width: 980px;
+    background-color: black;
+}
