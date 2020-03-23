@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\Admin\CategoryController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -76,5 +78,13 @@ route::prefix('db')->group(function() {
     route::get('updatedata-data','DBController@updateData');
     route::get('increment-data','DBController@increment');
     route::get('delete-data','DBController@delete');
+});
+
+
+route::namespace('Admin')->prefix('admin')->group(function(){
+    route::get('index', 'IndexController@index');
+    route::prefix('category')->group(function(){
+        route:get('index', 'CategoryController@index');
+    });
 });
 
