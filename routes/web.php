@@ -82,7 +82,7 @@ route::prefix('db')->group(function() {
 
 
 route::namespace('Admin')->prefix('admin')->group(function(){
-    route::get('index', 'IndexController@index');
+    route::get('index', 'IndexController@index')->name('admin.index');
     route::prefix('category')->group(function(){
         route::get('list', 'CategoryController@cate_list')->name('category.list');
         route::get('add', 'CategoryController@cate_addview')->name('category.addview');
@@ -92,8 +92,26 @@ route::namespace('Admin')->prefix('admin')->group(function(){
         Route::post('edit/{id}','CategoryController@cate_edit')->name('category.edit');
 
         route::get('delete/{id}', 'CategoryController@cate_delete')->name('category.delete');
+    });
+
+    route::prefix('news')->group(function(){
+        route::get('list', 'NewsController@news_list')->name('news.list');
+
+        route::get('add', 'NewsController@news_newview')->name('news.newview');
+        Route::post('create','NewsController@news_create')->name('news.create');
+
+        route::get('edit/{id}', 'NewsController@news_edit_view')->name('news.editview');
+        Route::post('edit/{id}','NewsController@news_edit')->name('news.edit');
+
+        route::get('delete/{id}', 'NewsController@news_delete')->name('news.delete');
        
         
     });
+
+    route::prefix('user')->group(function(){
+        route::get('add', 'UserController@user_newview')->name('news.newview');
+        
+    });
+
 });
 

@@ -16,7 +16,7 @@
             <table width="100%">
                 <tr>
                     <td>
-                        <a href="">Trang chính</a> | <a href="">Quản lý user</a> | <a href="">Quản lý danh mục</a> | <a href="">Quản lý tin</a>
+                        <a href="{{ route('admin.index') }}">Trang chính</a> | <a href="">Quản lý user</a> | <a href="{{ route('category.list') }}">Quản lý danh mục</a> | <a href="{{ route('news.list') }}">Quản lý tin</a>
                     </td>
                     <td align="right">
                         Xin chào | <a href="">Logout</a>
