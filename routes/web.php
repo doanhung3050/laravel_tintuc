@@ -87,6 +87,12 @@ route::namespace('Admin')->prefix('admin')->group(function(){
         route::get('list', 'CategoryController@cate_list')->name('category.list');
         route::get('add', 'CategoryController@cate_addview')->name('category.addview');
         Route::post('add','CategoryController@cate_add')->name('category.add');
+
+        route::get('edit/{id}', 'CategoryController@cate_edit_view')->name('category.editview');
+        Route::post('edit/{id}','CategoryController@cate_edit')->name('category.edit');
+
+        route::get('delete/{id}', 'CategoryController@cate_delete')->name('category.delete');
+       
         
     });
 });

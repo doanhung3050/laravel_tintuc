@@ -12,8 +12,8 @@
     <td class="aligncenter">{{ $loop->iteration }}</td>
    <td class="list_td alignleft">{{ $cate->name }}</td>
     <td class="list_td aligncenter">
-        <a href=""><img src="{{ asset('images/edit.png') }}" /></a>
-        <a href=""><img src="{{ asset('images/delete.png') }}" /></a>
+    <a href="{{ route('category.editview',['id' =>$cate->id]) }}"><img src="{{ asset('images/edit.png') }}" /></a>
+        <a href="{{ route('category.delete',['id' =>$cate->id]) }}"><img src="{{ asset('images/delete.png') }}" /></a>
     </td>
 </tr>
 

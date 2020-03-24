@@ -15,7 +15,7 @@
 	</tr>
 	<tr>
 		<td class="function_item cate_add"><a href="{{ route('category.addview')}}">Thêm danh mục</a></td>
-		<td class="function_item cate_list"><a href="{{ route('category.add')}}">Quản lý danh mục</a></td>
+		<td class="function_item cate_list"><a href="{{ route('category.list')}}">Quản lý danh mục</a></td>
 	</tr>
 	<tr>
 		<td class="function_item news_add"><a href="index.php?p=them-tin-tuc">Thêm tin</a></td>
