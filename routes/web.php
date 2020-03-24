@@ -84,7 +84,10 @@ route::prefix('db')->group(function() {
 route::namespace('Admin')->prefix('admin')->group(function(){
     route::get('index', 'IndexController@index');
     route::prefix('category')->group(function(){
-        route:get('index', 'CategoryController@index');
+        route::get('list', 'CategoryController@cate_list')->name('category.list');
+        route::get('add', 'CategoryController@cate_addview')->name('category.addview');
+        Route::post('add','CategoryController@cate_add')->name('category.add');
+        
     });
 });
 

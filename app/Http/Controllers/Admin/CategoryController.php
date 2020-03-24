@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\DB;
 use DateTime;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\Category\StoreRequest;
 
 class CategoryController extends Controller
 {
@@ -18,7 +19,7 @@ class CategoryController extends Controller
         return view('news.category.add');
     }
 
-    public function cate_add(Request $request){
+    public function cate_add(StoreRequest $request){
         $data = $request->except('_token');
         $data['created_at'] = new DateTime();
         DB::table('category')->insert($data);
